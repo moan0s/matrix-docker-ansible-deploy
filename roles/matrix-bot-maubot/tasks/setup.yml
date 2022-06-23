@@ -54,7 +54,7 @@
 - name: Generate Maubot proxying configuration for matrix-nginx-proxy
   set_fact:
     matrix_bot_maubot_matrix_nginx_proxy_configuration: |
-      location ~ ^/(_matrix/maubot/.*) {      
+      location ~ ^/(_matrix/maubot/.*) {
       {% if matrix_nginx_proxy_enabled|default(False) %}
       	{# Use the embedded DNS resolver in Docker containers to discover the service #}
       	resolver 127.0.0.11 valid=5s;
