@@ -45,6 +45,7 @@
         matrix_cactus_comments_nginx_proxy_configuration: |
           location {{ matrix_cactus_comments_client_endpoint }} {
               root {{ matrix_cactus_comments_client_nginx_path }};
+              add_header "Access-Control-Allow-Origin"  "*";
           }
 
     - name: Register Cactus Comment proxying configuration with matrix-nginx-proxy
