@@ -23,7 +23,7 @@
     - name: Generate Matrix LDAP registration proxy proxying configuration for matrix-nginx-proxy
       ansible.builtin.set_fact:
         matrix_ldap_registration_proxy_matrix_nginx_proxy_configuration: |
-          location {{ matrix_ldap_registration_proxy_public_endpoint }} {
+          location {{ matrix_ldap_registration_proxy_registration_endpoint }} {
           {% if matrix_nginx_proxy_enabled | default(False) %}
              {# Use the embedded DNS resolver in Docker containers to discover the service #}
              resolver 127.0.0.11 valid=5s;
