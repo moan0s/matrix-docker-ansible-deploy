@@ -55,4 +55,4 @@
 
   tags:
     - always
-  when: matrix_ldap_registration_proxy_enabled | bool and matrix_ldap_registration_proxy_appservice_public_enabled | bool
+  when: matrix_ldap_registration_proxy_enabled | bool
